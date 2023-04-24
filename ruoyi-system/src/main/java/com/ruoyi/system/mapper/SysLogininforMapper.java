@@ -5,14 +5,14 @@ import com.ruoyi.system.domain.SysLogininfor;
 
 /**
  * 系统访问日志情况信息 数据层
- * 
+ * YRJ（4.17）
  * @author ruoyi
  */
 public interface SysLogininforMapper
 {
     /**
      * 新增系统登录日志
-     * 
+     * insertLogininfor
      * @param logininfor 访问日志对象
      */
     public void insertLogininfor(SysLogininfor logininfor);
@@ -39,4 +39,6 @@ public interface SysLogininforMapper
      * @return 结果
      */
     public int cleanLogininfor();
+
 }
+

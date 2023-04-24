@@ -5,7 +5,7 @@ import com.ruoyi.system.domain.SysConfig;
 
 /**
  * 参数配置 数据层
- * 
+ * YRJ(4.23)
  * @author ruoyi
  */
 public interface SysConfigMapper
@@ -42,6 +42,7 @@ public interface SysConfigMapper
      */
     public SysConfig checkConfigKeyUnique(String configKey);
 
+
     /**
      * 新增参数配置
      * 
@@ -59,7 +60,7 @@ public interface SysConfigMapper
     public int updateConfig(SysConfig config);
 
     /**
-     * 删除参数配置
+     * 根据configId删除参数配置
      * 
      * @param configId 参数主键
      * @return 结果
@@ -72,5 +73,6 @@ public interface SysConfigMapper
      * @param configIds 需要删除的数据ID
      * @return 结果
      */
-    public int deleteConfigByIds(String[] configIds);
+
+
 }

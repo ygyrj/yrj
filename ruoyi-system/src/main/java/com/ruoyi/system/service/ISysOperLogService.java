@@ -5,14 +5,15 @@ import com.ruoyi.system.domain.SysOperLog;
 
 /**
  * 操作日志 服务层
- * 
+ * YRJ(4.17)
  * @author ruoyi
  */
 public interface ISysOperLogService
 {
     /**
      * 新增操作日志
-     * 
+     * insertOperLog
+     * insertOperLog
      * @param operLog 操作日志对象
      */
     public void insertOperlog(SysOperLog operLog);
@@ -45,4 +46,5 @@ public interface ISysOperLogService
      * 清空操作日志
      */
     public void cleanOperLog();
+
 }

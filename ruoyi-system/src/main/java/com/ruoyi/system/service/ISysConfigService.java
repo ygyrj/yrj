@@ -5,7 +5,7 @@ import com.ruoyi.system.domain.SysConfig;
 
 /**
  * 参数配置 服务层
- * 
+ * YRJ(4.21)
  * @author ruoyi
  */
 public interface ISysConfigService
@@ -79,4 +79,5 @@ public interface ISysConfigService
      * @return 结果
      */
     public String checkConfigKeyUnique(SysConfig config);
+
 }

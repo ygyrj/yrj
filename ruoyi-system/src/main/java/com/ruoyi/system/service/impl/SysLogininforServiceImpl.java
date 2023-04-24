@@ -10,7 +10,7 @@ import com.ruoyi.system.service.ISysLogininforService;
 
 /**
  * 系统访问日志情况信息 服务层处理
- * 
+ * YRJ（4.17）
  * @author ruoyi
  */
 @Service
@@ -20,14 +20,14 @@ public class SysLogininforServiceImpl implements ISysLogininforService
     @Autowired
     private SysLogininforMapper logininforMapper;
 
+
     /**
      * 新增系统登录日志
      * 
      * @param logininfor 访问日志对象
      */
     @Override
-    public void insertLogininfor(SysLogininfor logininfor)
-    {
+    public void insertLogininfor(SysLogininfor logininfor) {
         logininforMapper.insertLogininfor(logininfor);
     }
 
@@ -38,8 +38,7 @@ public class SysLogininforServiceImpl implements ISysLogininforService
      * @return 登录记录集合
      */
     @Override
-    public List<SysLogininfor> selectLogininforList(SysLogininfor logininfor)
-    {
+    public List<SysLogininfor> selectLogininforList(SysLogininfor logininfor) {
         return logininforMapper.selectLogininforList(logininfor);
     }
 
@@ -50,8 +49,7 @@ public class SysLogininforServiceImpl implements ISysLogininforService
      * @return 结果
      */
     @Override
-    public int deleteLogininforByIds(String ids)
-    {
+    public int delectLogininforByIds(String ids) {
         return logininforMapper.deleteLogininforByIds(Convert.toStrArray(ids));
     }
 
@@ -59,8 +57,8 @@ public class SysLogininforServiceImpl implements ISysLogininforService
      * 清空系统登录日志
      */
     @Override
-    public void cleanLogininfor()
-    {
+    public void cleanLogininfor() {
         logininforMapper.cleanLogininfor();
     }
+
 }

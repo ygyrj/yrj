@@ -5,7 +5,7 @@ import com.ruoyi.system.domain.SysUserOnline;
 
 /**
  * 在线用户 数据层
- * 
+ * YRJ（4.19）
  * @author ruoyi
  */
 public interface SysUserOnlineMapper
@@ -49,4 +49,5 @@ public interface SysUserOnlineMapper
      * @return 会话集合
      */
     public List<SysUserOnline> selectOnlineByExpired(String lastAccessTime);
+
 }

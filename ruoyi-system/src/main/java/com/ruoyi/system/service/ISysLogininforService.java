@@ -5,7 +5,7 @@ import com.ruoyi.system.domain.SysLogininfor;
 
 /**
  * 系统访问日志情况信息 服务层
- * 
+ * YRJ（4.17）
  * @author ruoyi
  */
 public interface ISysLogininforService
@@ -31,7 +31,7 @@ public interface ISysLogininforService
      * @param ids 需要删除的数据
      * @return 结果
      */
-    public int deleteLogininforByIds(String ids);
+    public int delectLogininforByIds(String ids);
 
     /**
      * 清空系统登录日志

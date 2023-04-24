@@ -6,7 +6,7 @@ import com.ruoyi.system.domain.SysUserOnline;
 
 /**
  * 在线用户 服务层
- * 
+ * YRJ（4.19）
  * @author ruoyi
  */
 public interface ISysUserOnlineService
@@ -44,7 +44,7 @@ public interface ISysUserOnlineService
 
     /**
      * 查询会话集合
-     * 
+     *
      * @param userOnline 分页参数
      * @return 会话集合
      */
@@ -63,7 +63,7 @@ public interface ISysUserOnlineService
      * @param loginName 登录名称
      * @param sessionId 会话ID
      */
-    public void removeUserCache(String loginName, String sessionId);
+    public void removeUserCache(String loginName,String sessionId);
 
     /**
      * 查询会话集合
@@ -72,4 +72,5 @@ public interface ISysUserOnlineService
      * @return 会话集合
      */
     public List<SysUserOnline> selectOnlineByExpired(Date expiredDate);
+
 }

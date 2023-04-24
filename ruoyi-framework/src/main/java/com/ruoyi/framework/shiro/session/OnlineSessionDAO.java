@@ -13,7 +13,7 @@ import com.ruoyi.framework.manager.factory.AsyncFactory;
 import com.ruoyi.framework.shiro.service.SysShiroService;
 
 /**
- * 针对自定义的ShiroSession的db操作
+ * 针对自定义?的ShiroSession的db操作
  * 
  * @author ruoyi
  */

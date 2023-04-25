@@ -41,23 +41,25 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <select id="selectConfigList" parameterType="SysConfig" resultMap="SysconfigResult">
         <include refid="selectConfigVo"/>
-        <if test="configName != null and configName != ''">
-            and config_name like concat('%',#{configName},'%')
-        </if>
-        <if test="configType !=null and configType !=''">
-            and config_type = #{configType}
-        </if>
-        <if test="configKey !=null and configKey !=''">
-            and config_key like concat('%',#{configKey},'%')
-        </if>
-        <if test="params.beginTime !=null and params.beginTime != ''"><!--开始时间检索 &gt大于-->
-            and date_format(create_time,'%y%m%d') &gt;=
-            date_format(#{params.beginTime},'%y%m%d')
-        </if>
-        <if test="params.endTime !=null and params.endTime !=''"><!--结束时间检索 &lt小于-->
-            and date_format(createTime,'%y%m%d') &lt;=
-            date_format(#{params.endTime},'%y%m%d')
-        </if>
+        <where>
+            <if test="configName != null and configName != ''">
+                and config_name like concat('%',#{configName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="configType !=null and configType !=''">
+                and config_type = #{configType}
+            </if>
+            <if test="configKey !=null and configKey !=''">
+                and config_key like concat('%',#{configKey},'%')
+            </if>
+            <if test="params.beginTime !=null and params.beginTime != ''"><!--开始时间检索 &gt大于-->
+                and date_format(create_time,'%y%m%d') &gt;=
+                date_format(#{params.beginTime},'%y%m%d')
+            </if>
+            <if test="params.endTime !=null and params.endTime !=''"><!--结束时间检索 &lt小于-->
+                and date_format(createTime,'%y%m%d') &lt;=
+                date_format(#{params.endTime},'%y%m%d')
+            </if>
+        </where>
     </select>
 
     <select id="selectConfigById" parameterType="Long" resultMap="SysconfigResult">

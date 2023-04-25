@@ -126,6 +126,7 @@ public class SysConfigServiceImpl implements ISysConfigService
         Long[] configIds=Convert.toLongArray(ids);
         for (Long configId:configIds) {
             SysConfig config=selectConfigById(configId);
+            //没看到if判断么   if判断为true才会往里走   思考思考  动动脑
             if (StringUtils.equals(UserConstants.YES,config.getConfigType())){
 //              // String.format("内置参数【%1$s】"，%s表示字符串，1：后面第一位，$：占位符
                 throw new ServiceException(String.format("内置参数【%1$s】",
@@ -135,7 +136,6 @@ public class SysConfigServiceImpl implements ISysConfigService
             CacheUtils.remove(getCacheName(),getCacheKey(config.getConfigKey()));
         }
     }
-
 
     /**
      * 加载参数缓存数据

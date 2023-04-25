@@ -28,13 +28,6 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      */
     @Override
     public void insertOperlog(SysOperLog operLog) {
-
-
-
-
-
-
-
         operLogMapper.insertOperLog(operLog);
     }
 

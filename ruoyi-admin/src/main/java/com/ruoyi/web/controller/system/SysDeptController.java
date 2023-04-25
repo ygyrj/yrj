@@ -184,4 +184,5 @@ public class SysDeptController extends BaseController
         List<Ztree> ztrees = deptService.selectDeptTreeExcludeChild(dept);
         return ztrees;
     }
+
 }

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author ruoyi
  */
 @Controller
-@RequestMapping("/monitor")
+@RequestMapping("/monitor/cache")
 public class CacheController extends BaseController {
     private String prefix = "monitor/cache";
 

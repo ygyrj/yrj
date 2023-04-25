@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                                  dept_name, oper_url, oper_ip, oper_location, oper_param, json_result,
                                  status, error_msg, oper_time)
         values (#{title}, #{businessType}, #{method}, #{requestMethod}, #{operatorType}, #{operName},
-                #{dept_name}, #{operUrl}, #{operIp}, #{operLocation}, #{operParam}, #{jsonResult},
+                #{deptName}, #{operUrl}, #{operIp}, #{operLocation}, #{operParam}, #{jsonResult},
                 #{status}, #{errorMsg}, sysdate())
     </insert>
 

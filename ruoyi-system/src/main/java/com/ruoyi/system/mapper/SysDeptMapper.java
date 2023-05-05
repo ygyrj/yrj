@@ -6,11 +6,10 @@ import com.ruoyi.common.core.domain.entity.SysDept;
 
 /**
  * 部门管理 数据层
- * 
+ * RJ(4.25)
  * @author ruoyi
  */
-public interface SysDeptMapper
-{
+public interface SysDeptMapper {
     /**
      * 查询下级部门数量
      * 
@@ -29,7 +28,7 @@ public interface SysDeptMapper
 
     /**
      * 查询部门管理数据
-     * 
+     *
      * @param dept 部门信息
      * @return 部门信息集合
      */
@@ -77,20 +76,30 @@ public interface SysDeptMapper
 
     /**
      * 校验部门名称是否唯一
-     * 
      * @param deptName 部门名称
      * @param parentId 父部门ID
-     * @return 结果
+     * @return
      */
-    public SysDept checkDeptNameUnique(@Param("deptName") String deptName, @Param("parentId") Long parentId);
+    //todo @Param 注解取消报缺少deptName 参数
+    public SysDept checkDeptNameUnique(@Param("deptName") String deptName,
+                                       @Param("parentId")Long parentId);
 
     /**
+     *
      * 根据角色ID查询部门
      *
      * @param roleId 角色ID
      * @return 部门列表
      */
     public List<String> selectRoleDeptTree(Long roleId);
+
+
+    /**
+     * String... 区别
+     */
+    //todo public  void test(String name);
+    //todo public  void test1(String... name);
+
 
     /**
      * 修改所在部门正常状态

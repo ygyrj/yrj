@@ -7,7 +7,7 @@ import com.ruoyi.common.core.domain.entity.SysRole;
 
 /**
  * 部门管理 服务层
- * 
+ * RJ(4.25)
  * @author ruoyi
  */
 public interface ISysDeptService
@@ -19,6 +19,7 @@ public interface ISysDeptService
      * @return 部门信息集合
      */
     public List<SysDept> selectDeptList(SysDept dept);
+
 
     /**
      * 查询部门管理树
@@ -90,7 +91,7 @@ public interface ISysDeptService
      * @param deptId 部门ID
      * @return 部门信息
      */
-    public SysDept selectDeptById(Long deptId);
+    public SysDept selectDeptById (Long deptId);
 
     /**
      * 根据ID查询所有子部门（正常状态）

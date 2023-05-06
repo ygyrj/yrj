@@ -5,7 +5,7 @@ import com.ruoyi.common.core.domain.entity.SysDictData;
 
 /**
  * 字典 业务层
- * 
+ * YRJ（5.5）
  * @author ruoyi
  */
 public interface ISysDictDataService
@@ -25,7 +25,7 @@ public interface ISysDictDataService
      * @param dictValue 字典键值
      * @return 字典标签
      */
-    public String selectDictLabel(String dictType, String dictValue);
+    public SysDictData selectDictLabel(String dictType,String dictValue);
 
     /**
      * 根据字典数据ID查询信息

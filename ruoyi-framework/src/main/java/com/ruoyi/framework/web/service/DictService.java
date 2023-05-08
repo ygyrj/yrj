@@ -41,6 +41,6 @@ public class DictService
      */
     public String getLabel(String dictType, String dictValue)
     {
-        return dictDataService.selectDictLabel(dictType, dictValue);
+        return dictDataService.selectDictLabel(dictType,dictValue);
     }
 }

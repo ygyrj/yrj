@@ -25,7 +25,7 @@ public interface ISysDictDataService
      * @param dictValue 字典键值
      * @return 字典标签
      */
-    public SysDictData selectDictLabel(String dictType,String dictValue);
+    public String selectDictLabel(String dictType,String dictValue);
 
     /**
      * 根据字典数据ID查询信息

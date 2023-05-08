@@ -7,7 +7,7 @@ import com.ruoyi.common.core.domain.entity.SysDictType;
 
 /**
  * 字典 业务层
- * 
+ * YRJ(5.6)
  * @author ruoyi
  */
 public interface ISysDictTypeService
@@ -44,7 +44,7 @@ public interface ISysDictTypeService
     public SysDictType selectDictTypeById(Long dictId);
 
     /**
-     * 根据字典类型查询信息
+     * 根据字典类型查询类型信息
      * 
      * @param dictType 字典类型
      * @return 字典类型

@@ -6,7 +6,7 @@ import com.ruoyi.common.core.domain.entity.SysDictData;
 
 /**
  * 字典表 数据层
- * 
+ * YRJ（5.5）
  * @author ruoyi
  */
 public interface SysDictDataMapper
@@ -21,7 +21,7 @@ public interface SysDictDataMapper
 
     /**
      * 根据字典类型查询字典数据
-     * 
+     *
      * @param dictType 字典类型
      * @return 字典数据集合信息
      */
@@ -34,7 +34,8 @@ public interface SysDictDataMapper
      * @param dictValue 字典键值
      * @return 字典标签
      */
-    public String selectDictLabel(@Param("dictType") String dictType, @Param("dictValue") String dictValue);
+    public String selectDictLabel(@Param("dictType")String dictType,
+                                  @Param("dictValue")String dictValue);
 
     /**
      * 根据字典数据ID查询信息
@@ -45,7 +46,7 @@ public interface SysDictDataMapper
     public SysDictData selectDictDataById(Long dictCode);
 
     /**
-     * 查询字典数据
+     * 查询字典数据(条数)
      * 
      * @param dictType 字典类型
      * @return 字典数据
@@ -59,6 +60,7 @@ public interface SysDictDataMapper
      * @return 结果
      */
     public int deleteDictDataById(Long dictCode);
+
 
     /**
      * 批量删除字典数据
@@ -91,5 +93,6 @@ public interface SysDictDataMapper
      * @param newDictType 新旧字典类型
      * @return 结果
      */
-    public int updateDictDataType(@Param("oldDictType") String oldDictType, @Param("newDictType") String newDictType);
+    public int updateDictDataType(@Param("oldDictType") String oldDictType,
+                                  @Param("newDictType") String newDictType);
 }

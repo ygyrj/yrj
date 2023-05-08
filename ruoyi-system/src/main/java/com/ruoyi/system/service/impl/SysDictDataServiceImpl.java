@@ -40,7 +40,7 @@ public class SysDictDataServiceImpl implements ISysDictDataService
      * @return 字典标签
      */
     @Override
-    public SysDictData selectDictLabel(String dictType, String dictValue) {
+    public String selectDictLabel(String dictType, String dictValue) {
         return dictDataMapper.selectDictLabel(dictType,dictValue);
     }
 

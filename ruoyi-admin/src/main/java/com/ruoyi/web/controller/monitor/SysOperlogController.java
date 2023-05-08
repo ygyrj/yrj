@@ -27,7 +27,7 @@ import com.ruoyi.system.service.ISysOperLogService;
 @Controller
 @RequestMapping("/monitor/operlog")
 public class SysOperlogController extends BaseController{
-    private String prefix = "monitor/ooperlog";
+    private String prefix = "monitor/operlog";
 
     @Autowired
     private ISysOperLogService operLogService;
@@ -35,7 +35,7 @@ public class SysOperlogController extends BaseController{
     @RequiresPermissions("monitor:operlog:view")
     @GetMapping()
     public String operLog(){
-        return prefix + "/operrlog";
+        return prefix + "/operlog";
     }
 
     @RequiresPermissions("monitor:operlog:list")

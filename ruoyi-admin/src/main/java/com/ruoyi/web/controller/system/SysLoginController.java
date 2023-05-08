@@ -22,7 +22,7 @@ import com.ruoyi.framework.web.service.ConfigService;
 
 /**
  * 登录验证
- * 
+ * YRJ（4.17
  * @author ruoyi
  */
 @Controller

@@ -56,6 +56,7 @@ public class SysLoginController extends BaseController
     @ResponseBody
     public AjaxResult ajaxLogin(String username, String password, Boolean rememberMe)
     {
+        //获取用户名密码token，rememberMe是否记住用户名密码
         UsernamePasswordToken token = new UsernamePasswordToken(username, password, rememberMe);
         Subject subject = SecurityUtils.getSubject();
         try
@@ -74,6 +75,9 @@ public class SysLoginController extends BaseController
         }
     }
 
+    /**
+     * 是否授权
+     */
     @GetMapping("/unauth")
     public String unauth()
     {

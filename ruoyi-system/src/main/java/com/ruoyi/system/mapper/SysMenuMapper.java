@@ -6,17 +6,18 @@ import com.ruoyi.common.core.domain.entity.SysMenu;
 
 /**
  * 菜单表 数据层
- * 
+ * YRJ(5.10)
  * @author ruoyi
  */
 public interface SysMenuMapper
 {
     /**
      * 查询系统所有菜单（含按钮）
-     * 
+     * YRJ：查询所有菜单
      * @return 菜单列表
      */
     public List<SysMenu> selectMenuAll();
+
 
     /**
      * 根据用户ID查询菜单
@@ -47,7 +48,6 @@ public interface SysMenuMapper
      * @param userId 用户ID
      * @return 权限列表
      */
-    public List<String> selectPermsByUserId(Long userId);
 
     /**
      * 根据角色ID查询权限
@@ -55,7 +55,6 @@ public interface SysMenuMapper
      * @param roleId 角色ID
      * @return 权限列表
      */
-    public List<String> selectPermsByRoleId(Long roleId);
 
     /**
      * 根据角色ID查询菜单
@@ -65,9 +64,10 @@ public interface SysMenuMapper
      */
     public List<String> selectMenuTree(Long roleId);
 
+
     /**
      * 查询系统菜单列表
-     * 
+     * YRJ： 根据“菜单名称”，“是否显示”查询
      * @param menu 菜单信息
      * @return 菜单列表
      */
@@ -80,6 +80,7 @@ public interface SysMenuMapper
      * @return 菜单列表
      */
     public List<SysMenu> selectMenuListByUserId(SysMenu menu);
+
 
     /**
      * 删除菜单管理信息
@@ -128,5 +129,6 @@ public interface SysMenuMapper
      * @param parentId 父菜单ID
      * @return 结果
      */
-    public SysMenu checkMenuNameUnique(@Param("menuName") String menuName, @Param("parentId") Long parentId);
+    public SysMenu checkMenuNameUnique(@Param("menuName") String menuName,
+                                       @Param("parentId") Long parentId);
 }

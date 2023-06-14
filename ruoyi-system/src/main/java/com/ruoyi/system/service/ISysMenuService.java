@@ -7,6 +7,7 @@ import com.ruoyi.common.core.domain.Ztree;
 import com.ruoyi.common.core.domain.entity.SysMenu;
 import com.ruoyi.common.core.domain.entity.SysRole;
 import com.ruoyi.common.core.domain.entity.SysUser;
+import lombok.Lombok;
 
 /**
  * 菜单 业务层
@@ -30,7 +31,7 @@ public interface ISysMenuService
      * @param userId 用户ID
      * @return 菜单列表
      */
-    public List<SysMenu> selectMenuList(SysMenu menu, Long userId);
+    public List<SysMenu> selectMenuList(SysMenu menu,Long userId);
 
     /**
      * 查询菜单集合
@@ -46,7 +47,7 @@ public interface ISysMenuService
      * @param userId 用户ID
      * @return 权限列表
      */
-    public Set<String> selectPermsByUserId(Long userId);
+//    public Map<String,String> select
 
     /**
      * 根据角色ID查询权限
@@ -54,7 +55,6 @@ public interface ISysMenuService
      * @param roleId 角色ID
      * @return 权限列表
      */
-    public Set<String> selectPermsByRoleId(Long roleId);
 
     /**
      * 根据角色ID查询菜单
@@ -63,7 +63,7 @@ public interface ISysMenuService
      * @param userId 用户ID
      * @return 菜单列表
      */
-    public List<Ztree> roleMenuTreeData(SysRole role, Long userId);
+    public List<Ztree> roleMenuTreeData(SysRole role,Long userId);
 
     /**
      * 查询所有菜单信息
@@ -79,7 +79,7 @@ public interface ISysMenuService
      * @param userId 用户ID
      * @return 权限列表
      */
-    public Map<String, String> selectPermsAll(Long userId);
+    public Map<String,String> selectPermsAll(Long userId);
 
     /**
      * 删除菜单管理信息
